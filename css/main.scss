@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&display=swap');
+
+@import "reset.scss";
+
+/*
+    app
+*/
+
+.background {
+    position: fixed;
+    background: url('../img/background.jpg') no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.container {
+    position: relative;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    &_inner {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .logo {
+            padding-top: 40px;
+        }
+
+        /* TAB BUTTON */
+    
+        .tab_button {
+            display: flex;
+            margin-top: 80px;
+            border: 2px solid #fff;
+            border-radius: 50px;
+            overflow: hidden;
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-width: 210px;
+                height: 46px;
+                padding: 0 20px;
+                color: #fff;
+                cursor: pointer;
+
+                @media screen and (max-width: 576px) {
+                    min-width: inherit;
+                }
+
+                &.active {
+                    background-color: #fff;
+                    color: #4F5362;
+                }
+            }
+        }
+
+        /* SLİDER */
+
+        .slider {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-top: 80px;
+            text-align: center;
+            color: #fff;
+
+            .button {
+                position: absolute;
+                width: 100%;
+                text-indent: -9999px;
+
+                a {
+                    width: 12px;
+                    height: 20px;
+                    cursor: pointer;
+
+                    &.left {
+                        float: left;
+                        background: url('../img/slider-left.svg') no-repeat;
+                    }
+
+                    &.right {
+                        float: right;
+                        background: url('../img/slider-right.svg') no-repeat;
+                    }
+                }
+            }            
+
+            .text {
+                margin: 0 80px;
+                font-weight: 900;
+                font-size: 52px;
+                z-index: 1;
+
+                @media screen and (max-width: 576px) {
+                    margin: 0 40px;
+                    font-size: 32px;
+                }
+            }
+        }
+
+        /* CARD */
+        .card {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-gap: 50px;
+            margin-top: 100px;
+            padding: 0 40px;
+
+            @media screen and (max-width: 576px) {
+                padding: 0;
+                margin-bottom: 100px;
+            }
+            
+            &_item {
+                display: flex;
+                padding: 25px;
+                border-radius: 5px;
+                background-color: #222328;
+                font-size: 12px;
+                color: #A8ACB9;
+                opacity: 0.7;
+
+                .info {
+                    padding: 15px 0 0 20px;
+                }
+
+                .social {
+                    margin-top: 15px;
+
+                    a {
+                        padding-right: 20px;
+                        cursor: pointer;
+                    }
+
+                    a:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+
+            &_item.active {
+                background-color: #fff;
+                box-shadow: 0px 29px 55px rgba(0, 0, 0, 0.69);
+            }
+        }
+    }
+}
