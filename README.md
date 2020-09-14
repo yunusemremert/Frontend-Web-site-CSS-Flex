@@ -1,2 +1,2 @@
-# figma-basic-site-css-flex
- Figma to CSS
+# Frontend-Web-site-CSS-Flexx
+ Figma to CSS çalışması.
